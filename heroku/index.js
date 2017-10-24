@@ -50,7 +50,7 @@ var app = (0, _express2.default)();
 app.use(_bodyParser2.default.json());
 // *********************************************************************************
 // must be the right order; static file first!
-app.use('/', _express2.default.static('heroku/public'));
+app.use('/', _express2.default.static('./public'));
 app.use('/', (0, _expressGraphql2.default)({ schema: _schema.schema, graphiql: true, pretty: true }));
 // *********************************************************************************
 
